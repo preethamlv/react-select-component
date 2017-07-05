@@ -178,7 +178,7 @@ var Value = React.createClass({
 
 module.exports = Value;
 
-},{"classnames":undefined,"react":undefined}],"react-select":[function(require,module,exports){
+},{"classnames":undefined,"react":undefined}],"react-select-component":[function(require,module,exports){
 /* disable some rules until we refactor more completely; fixing them now would
    cause conflicts with some open PRs unnecessarily. */
 /* eslint react/jsx-sort-prop-types: 0, react/sort-comp: 0, react/prop-types: 0 */
@@ -682,16 +682,6 @@ var Select = React.createClass({
 			case 40:
 				// down
 				this.focusNextOption();
-				break;
-			case 188:
-				// ,
-				if (this.props.allowCreate && this.props.multi) {
-					event.preventDefault();
-					event.stopPropagation();
-					this.selectFocusedOption();
-				} else {
-					return;
-				}
 				break;
 			default:
 				return;
